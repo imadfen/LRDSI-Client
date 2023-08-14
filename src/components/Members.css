@@ -1,0 +1,44 @@
+.member-main{
+    margin: 20px;
+}
+
+.member-details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.chef{
+    margin: 0 0 5px 10px; 
+    width: fit-content;
+    color: rgba(0, 0, 0, 0.4);
+    user-select: none;
+}
+
+.member-name{
+    margin: 0;
+    user-select: none;
+}
+
+.member-email{
+    margin: 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.member-title{
+    align-self: end;
+    font-size: small;
+    user-select: none;
+}
+
+.member{
+    padding: 0 5px;
+    border-radius: 10px;
+    transition: background-color 0.25s;
+}
+
+.member:hover{
+    background-color: rgb(228, 228, 228);
+    transition: background-color 0.25s;
+}

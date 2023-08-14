@@ -1,0 +1,33 @@
+.Thesis{
+    position: relative;
+    margin: 0 auto 10px auto;
+    padding: 15px 30px;
+    cursor: default;
+}
+
+.condidate{
+    display: flex;
+    align-items: center;
+}
+
+.Thesis-candidate{
+    margin: 0;
+}
+
+.Thesis-title{
+    margin-top: 5px;
+}
+
+.Thesis-framers{
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.Thesis-date{
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.date-icon{
+    margin-right: 10px;
+}

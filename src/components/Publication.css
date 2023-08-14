@@ -1,0 +1,54 @@
+.publication{
+    position: relative;
+    margin: 0 auto 10px auto;
+    padding: 20px 30px;
+    cursor: default;
+}
+
+.publication-author{
+    margin: 0;
+}
+
+.publication-title{
+    margin-top: 5px;
+}
+
+.publication-journal{
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.publication-date{
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.date-icon{
+    margin-right: 10px;
+}
+
+.publication-access-url{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 12%;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
+.publication-access-url:hover{
+    color: white;
+    background-color: #126e62;
+    border-color: white;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
+

@@ -1,0 +1,25 @@
+.contact{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    width:100%;
+    background-color:#fafafa;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.forme{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 80%;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}

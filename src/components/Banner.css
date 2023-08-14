@@ -1,0 +1,12 @@
+.banner{
+    background-color: #126e62;
+    padding: 5px 100px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner h1{
+    color: white;
+}

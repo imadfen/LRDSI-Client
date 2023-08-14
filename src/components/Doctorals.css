@@ -1,0 +1,26 @@
+.doctoral-main{
+    margin: 20px;
+}
+
+.doctoral{
+    display: flex;
+    min-height:35px;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.25s;
+}
+
+.doctoral-name{
+    margin: 0;
+    user-select: none;
+}
+
+.bullet{
+    margin: 0 20px;
+    color: #126e62;
+}
+
+.doctoral:hover{
+    background-color: rgb(228, 228, 228);
+    transition: background-color 0.25s;
+}

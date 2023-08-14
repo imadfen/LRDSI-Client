@@ -1,0 +1,31 @@
+.notif-body{
+    background-color: white;
+    width: 300px;
+    height: 20vh;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 30% auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    user-select: none;
+    cursor: default;
+}
+
+.notif-logo{
+    color: #126e62;
+    font-size: 60px;
+    justify-self: center;
+    align-self: center;
+}
+
+.notif-text{
+    color: #126e62;
+    justify-self: center;
+    align-self: center;
+}

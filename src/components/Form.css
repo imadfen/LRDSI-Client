@@ -1,0 +1,117 @@
+form{
+    padding: 10px 30px;
+    position: relative;
+}
+.titleC{
+    text-align: center;
+    color:#ebebeb ;
+    font-weight: 500;
+    font-size:25px;
+    text-decoration: underline;
+}
+.contact-forme{
+    background-color: #126e62;
+    position: relative;
+}
+.contact-forme:before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #126e62;
+    transform: rotate(45deg);
+    top:35px;
+    left:-13px;
+}
+.input-info{
+    position: relative;
+    margin: 20px 0;
+}
+.input{
+    width:100%;
+    outline: none;
+    border: 2px solid #ebebeb;
+    background: none;
+    padding: 5px 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: medium;
+    letter-spacing:0.5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+textarea.input{
+    min-height: 100px;
+    resize: none;
+    overflow-y: auto;
+}
+.input-info label{
+    position:absolute;
+    top:45%;
+    left:15px;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    color: #ebebeb;
+    font-size: 15px;
+    font-weight:400;
+    transition:0.5s;
+    opacity: 0.8;
+
+}
+.input-info.text label{
+    top:1rem;
+    transform: translate(0);
+    z-index:10000;
+}
+.btn{
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #126e62;
+    cursor: pointer;
+    font-size: medium;
+    transition: 0.3s;
+    margin:0;
+}
+.btn:hover{
+    background-color:transparent;
+    color: #fafafa;
+}
+.input-info span{
+    position:absolute;
+    top:0;
+    left:20px;
+    transform: translateY(-50%);
+    font-size:15px;
+    color:transparent;
+    pointer-events: none;
+}
+.input-info span:after,
+.input-info span:before{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition:0.3s;
+    height:5px;
+    background-color: #126e62;
+    top:50%;
+    transform: translateY(-50%);
+}
+.input-info span:before{
+    left:75%;
+}
+.input-info span::after{
+    right:25%;
+}
+.input-info.focus label{
+    transform:translateY(-50%);
+    top:-1px;
+    left:23px;
+    font-size: 15px;
+    z-index: 10000000;
+}
+.input-info.focus span:before,
+.input-info.focus span:after{
+    width: 70%;
+    opacity: 1;
+}

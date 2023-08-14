@@ -1,0 +1,301 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 80px;
+    background-color: white;
+    min-height: 120vh;
+    overflow-x: hidden;
+}
+
+.App.admin{
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-body{
+    flex: 1;
+}
+
+.Footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.content-page{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.spinner{
+    align-self: center;
+    margin-top: 40px;
+}
+
+.spinner-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.error-msg{
+    background-color: rgb(236, 136, 136);
+    padding: 10px;
+    margin-top: 40px;
+    width: fit-content;
+    font-weight: bolder;
+    color: white;
+    border: solid 2px rgb(187, 97, 97);
+    border-radius: 10px;
+    align-self: center;
+}
+
+.error-msg-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.react-tabs__tab-list{
+    display: flex;
+    justify-content: center;
+}
+
+.react-tabs__tab{
+    width: 20%;
+    text-align: center;
+    font-size: larger;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.25s;
+}
+
+.react-tabs__tab:not(.react-tabs__tab--selected):hover{
+    background-color: rgb(173, 173, 173);
+    transition: background-color 0.25s;
+}
+
+.projects-section{
+    margin-top: 20px;
+}
+
+
+.pub-event-content{
+    display: flex;
+    padding: 30px;
+}
+
+.pub-event-content .content{
+    width: 100%;
+    margin: 0;
+    padding: 10px 30px;
+}
+
+
+.react-tabs__tab-panel--selected{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.pubevent-tab-list{
+    margin: 0 !important;
+}
+
+.separator{
+    width: 90%;
+    margin-bottom: 0;
+}
+
+
+.thesmemo-tab-list {
+    margin-bottom: 0 !important;
+}
+
+
+.home-content-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ################ Contact ############## */
+.contact{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+.container{
+    width:100%;
+    background-color:#fafafa;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.forme{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 80%;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+
+
+
+
+/* ################# admin pages ################### */
+/* **************** login page **************** */
+
+.login-page-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.form-section{
+    background-color: #ECF2FF;
+    width: 35%;
+    padding: 30px;
+    border-radius: 5px;
+    cursor: default;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section .logo{
+    width: 50%;
+    margin: 10px 21%;
+}
+
+.form-section .title{
+    font-size: 200%;
+    margin: 10px auto 0;
+    color: #126e62;
+}
+
+
+.form-section .title-underline{
+    height: 5px;
+    width: 20%;
+    background-color: #126e62;
+    outline: none;
+    border-radius: 15px;
+}
+
+.form-body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: end;
+}
+
+.form-buttons *{
+    margin: 0 5px;
+    height: 40px;
+    min-width: 25%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(248, 248, 248);
+}
+
+.form-buttons .login-submit{
+    background-color: #126e62;
+    transition: all 0.2s;
+}
+
+.form-buttons .login-submit:hover{
+    background-color: #0e584f;
+    transition: all 0.2s;
+}
+
+.form-buttons .login-submit:active{
+    animation: submit-button-click 0.1s;
+}
+
+@keyframes submit-button-click {
+    0%{
+        background-color: #0e584f;
+    }
+
+    100%{
+        background-color: #168a7c;
+    }
+}
+
+.form-buttons .login-cancel{
+    background-color: #DC3545;
+    transition: all 0.2s;
+}
+
+.form-buttons .login-cancel:hover{
+    background-color: #b42b39;
+    transition: all 0.2s;
+}
+
+.form-buttons .login-cancel:active{
+    animation: cancel-button-click 0.1s;
+}
+
+@keyframes cancel-button-click {
+    0%{
+        background-color: #b42b39;
+    }
+
+    100%{
+        background-color: #e93547;
+    }
+}
+
+.invalid-login-span{
+    min-height: 35px;
+}
+
+.invalid-login-message{
+    color: red;
+    font-size: medium;
+    font-weight: 500;
+    margin: 5px;
+}
+
+
+/* **************** admin home page **************** */
+.admin-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+.admin-page-content{
+    cursor: default;
+    display: grid;
+    grid-template-columns: 200px auto;
+}

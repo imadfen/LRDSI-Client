@@ -1,0 +1,40 @@
+.actuality{
+    width: 85%;
+    min-height: 20vh;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 10px 0;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
+.actuality-user-date{
+    display: flex;
+    min-width: 50%;
+}
+
+.actuality-user-date *{
+    margin: 0 10px 0 0;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.actuality-title{
+    margin: 0;
+}
+
+.actuality-image-container{
+    width: 100%;
+    padding: 0;
+    max-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actuality-image{
+    width: 100%;
+}
+

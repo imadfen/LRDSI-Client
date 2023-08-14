@@ -1,0 +1,25 @@
+.search-bar{
+    width: 20%;
+    background-color: white;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input{
+    width: 70%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding: 5px 10px;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.search-bar .icon{
+    color: #126e62;
+}

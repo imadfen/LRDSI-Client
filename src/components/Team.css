@@ -1,0 +1,27 @@
+.team{
+    width: 60%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 61px -25px rgba(0,0,0,0.75);
+}
+
+.teamTitle{
+    display: flex;
+    align-items: center;
+}
+
+.list-bullet{
+    width: 30px;
+    margin-left: 20px;
+}
+
+.team h2{
+    margin-left: 20px;
+}
+
+.react-tabs__tab{
+    user-select: none;
+}

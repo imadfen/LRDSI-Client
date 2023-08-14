@@ -1,0 +1,26 @@
+.actuality-container{
+    width: 90%;
+    min-height: 10vh;
+    background-color: #ECF2FF;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    cursor: default;
+}
+
+
+.actuality-container h1{
+    color: #126e62;
+    font-weight: 900;
+}
+
+.actuality-container hr{
+    width: 5rem;
+    height: 5px;
+    background-color: #126e62;
+    border-radius: 10px;
+    margin: 0;
+    margin-bottom: 20px;
+}

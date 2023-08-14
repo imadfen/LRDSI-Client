@@ -1,0 +1,9 @@
+
+blueish-green: #126e62
+grey : #8b8c90
+light-grey : #ebebeb
+
+#439A97
+#62B6B7
+#97DECE
+#CBEDD5

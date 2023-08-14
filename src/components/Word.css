@@ -1,0 +1,51 @@
+.word-container{
+    border-radius:10px;
+    margin-bottom: 5px;
+    display:flex;
+    margin: 20px 0;
+    align-items: end;
+
+}
+
+.lrdsi-img{
+    width: 300px;
+    margin-bottom: 0;
+}
+
+.presen{
+    width:50%;
+    padding: 20px;
+    text-indent: 30px;
+    font-size: large;    
+    font-weight: 700;
+}
+.post{
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.author{
+    text-align: right;
+    font-size:small;
+    font-weight: 500;
+}
+
+
+.pav{
+    width:500px;
+    height:500px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin: 20px 0 50px 30px;
+    border-radius:10px;
+    background-image: linear-gradient(to top, transparent 70%, transparent 70%, white),
+                        linear-gradient(to right,  transparent 80%,  transparent 80%, white),
+                        linear-gradient(to bottom,  transparent 80%,  transparent 80%, white),
+                        linear-gradient(to left,  transparent 80%,  transparent 80%, white),
+                        url('../assets/pav1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

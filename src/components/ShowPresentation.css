@@ -1,0 +1,145 @@
+.presentation-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-div .section{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.presentation-div .section.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.presentation-div .section.presentation .title{
+    margin-bottom: 5px;
+}
+
+.presentation-div .section *{
+    margin: 0;
+}
+
+.presentation-div .section .title{
+    margin-right: 20px;
+}
+
+.presentation-div .section .title.score{
+    margin-left: 20px;
+}
+
+.presentation-div .section p{
+    font-size: large;
+    font-weight: 500;
+}
+
+.presentation-div .buttons{
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.presentation-div .buttons.modify{
+    display: flex;
+    align-items: baseline;
+}
+
+.presentation-div .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    min-width: 150px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(248, 248, 248);
+}
+
+.presentation-div .buttons button{
+    background-color: #126e62;
+    transition: all 0.2s;
+}
+
+.presentation-div .buttons button:hover{
+    background-color: #0e584f;
+    transition: all 0.2s;
+}
+
+.presentation-div .buttons button:active{
+    animation: modify-button-click 0.1s;
+}
+
+@keyframes modify-button-click {
+    0%{
+        background-color: #0e584f;
+    }
+
+    100%{
+        background-color: #168a7c;
+    }
+}
+
+.presentation-div.form{
+    margin: 0;
+    padding: 0;
+}
+
+.presentation-div.form .section{
+    align-items: baseline;
+}
+
+.presentation-div.form input{
+    padding: 0;
+    outline: none;
+    border: none;
+    border-bottom: transparent 3px solid;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 500;
+    background-color: rgb(236, 242, 255);
+    min-height: 30px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.presentation-div.form textarea{
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border-bottom: transparent 3px solid;
+    width: 100%;
+    min-height: 45vh;
+    font-size: medium;
+    font-weight: 500;
+    background-color: rgb(236, 242, 255);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+}
+
+.presentation-div.form input:focus,
+.presentation-div.form textarea:focus{
+    border: none;
+    border-radius: 5px 5px 0 0;
+    border-bottom: #126e62 3px solid;
+}
+
+.presentation-div.form .error-modify{
+    color: red;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.presentation-div .no-access-msg{
+    color: #0275d8;
+    font-size: small;
+    font-weight: 500;
+    margin: 0;
+}
