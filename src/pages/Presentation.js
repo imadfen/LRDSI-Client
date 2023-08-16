@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Stat from '../components/Statistique';
 import Word from '../components/Word';
 import Banner from '../components/Banner';

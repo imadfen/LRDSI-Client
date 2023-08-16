@@ -25,3 +25,25 @@
 .table p.selected{
     background-color: #0d4d44;
 }
+
+.menu-button{
+    margin: 10px 0 10px auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: transparent;
+    border-radius: 50px;
+    padding: 5px 10px;
+    background-color: #126e62;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-button:active{
+    scale: 95%;
+}
+
+.MuiList-root{
+    background-color: #126e62;
+}

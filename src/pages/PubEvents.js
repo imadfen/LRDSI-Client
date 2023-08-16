@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import ClipLoader from "react-spinners/ClipLoader";
 import Banner from '../components/Banner'
 import PagesList from '../components/PagesList'
-import '../App.css'
 import PubCommSection from '../components/PubCommSection';
 import ThesMemoSection from '../components/ThesMemoSection';
 import EventsSection from '../components/EventsSection';
@@ -12,7 +10,7 @@ import fetchFunction from '../Functions/fetchFunction';
 
 
 
-function PubEvents() {
+function PubEvents({isLargeScreen}) {
   const [publications, setPublications] = useState([]);
   const [communications, setCommunications] = useState([]);
   const [thesis, setThesis] = useState([]);
@@ -50,12 +48,6 @@ function PubEvents() {
     )
   }, []);
 
-
-  const Spinner = () => {
-      return <ClipLoader color="#36d7b7" />
-  };
-  
-
   const ContentRenderer = () => {
     switch (currentContent) {
       case 0:
@@ -86,7 +78,7 @@ function PubEvents() {
       ?   <div className='error-msg-container'><span className='error-msg'>Erreur Chargement des Données</span></div>
       :   !loading
         ? <div className='pub-event-content'>
-            <PagesList switchContent={(index) => setContent(index)} selected={currentContent}/>
+            <PagesList switchContent={(index) => setContent(index)} selected={currentContent} isLargeScreen={isLargeScreen} />
             <div className='content'>
                 {
                   ContentRenderer()

@@ -42,7 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Presentation" element={<Présentation />} />
           <Route path="/teams" element={<Teams />} />
-          <Route path="/pubevents" element={<PubEvents />} />
+          <Route path="/pubevents" element={<PubEvents isLargeScreen={isLargeScreen} />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" />} />
