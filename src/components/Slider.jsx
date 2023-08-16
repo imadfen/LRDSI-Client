@@ -34,7 +34,7 @@ function Slider({sliderData}) {
 
   return (
     <div className='slider-container'>
-        <Carousel showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true} transitionTime={200}>
+        <Carousel showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true} transitionTime={200} preventMovementUntilSwipeScrollTolerance swipeScrollTolerance={50}>
           {sliderData.map((elem, i) => {
             return(
               <div className='slider-element' key={uuidv4()}>
