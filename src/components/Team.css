@@ -1,27 +1,45 @@
-.team{
-    width: 60%;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 0px 61px -25px rgba(0,0,0,0.75);
+.team {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 61px -25px rgba(0, 0, 0, 0.75);
 }
 
-.teamTitle{
-    display: flex;
-    align-items: center;
+.teamTitle {
+  display: flex;
+  align-items: center;
 }
 
-.list-bullet{
-    width: 30px;
-    margin-left: 20px;
+.list-bullet {
+  width: 30px;
+  margin-left: 20px;
 }
 
-.team h2{
-    margin-left: 20px;
+.team h2 {
+  margin-left: 20px;
+  font-size: larger;
 }
 
-.react-tabs__tab{
-    user-select: none;
+.react-tabs__tab {
+  user-select: none;
+}
+
+.react-tabs__tab-list{
+    font-size: small;
+}
+
+@media (min-width: 992px) {
+    .team {
+        width: 60%;
+    }
+
+    .team h2 {
+        font-size: x-large;
+    }
+
+    .react-tabs__tab-list{
+        font-size: medium;
+    }
 }

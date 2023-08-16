@@ -1,5 +1,6 @@
 .body-page{
     background-color: #d3e0de;
+    padding: 20px 0;
 }
 .titre{
     text-align: center;
@@ -22,7 +23,7 @@
     display: flex;
 }
 .content-info img{
-    width: 45px;
+    width: min(45px, 10%);
     align-self: center;
 }
 .content-info p{

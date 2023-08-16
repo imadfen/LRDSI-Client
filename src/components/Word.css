@@ -1,19 +1,22 @@
 .word-container{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.pres-and-pav{
     border-radius:10px;
     margin-bottom: 5px;
     display:flex;
-    margin: 20px 0;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 .lrdsi-img{
-    width: 300px;
-    margin-bottom: 0;
+    width: min(300px, 60%);
 }
 
 .presen{
-    width:50%;
     padding: 20px;
     text-indent: 30px;
     font-size: large;    
@@ -34,11 +37,9 @@
 
 
 .pav{
-    width:500px;
-    height:500px;
-    margin-left: 30px;
-    margin-top: 20px;
-    margin: 20px 0 50px 30px;
+    aspect-ratio: 1;
+    width: min(500px, 100%);
+    margin: auto 0 auto 30px;
     border-radius:10px;
     background-image: linear-gradient(to top, transparent 70%, transparent 70%, white),
                         linear-gradient(to right,  transparent 80%,  transparent 80%, white),
@@ -48,4 +49,16 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+
+@media (min-width: 992px) {
+    .pres-and-pav{
+        flex-direction: row;
+        align-items: end;
+    }
+
+    .presen{
+        width: 50%;
+    }
 }

@@ -1,58 +1,74 @@
-.navbar{
-    width:100%;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    background-color:rgb(255, 255, 255);
+.navbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
 }
-.navbar .left{
-    flex:25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar .left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.navbar .left img{
-    width:280px;
+.navbar .left img {
+  width: 180px;
 }
-.navbar .right{
-    flex:60%;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+.navbar .right {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: auto;
 }
 
-.navlink{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    margin: 30px 20px 0 20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    user-select: none;
-    position: relative;
-    padding-bottom: 30px;
+.hamburger-button {
+  font-size: x-large;
+  color: #126e62;
+  margin: auto 30px;
 }
 
-.navlink::after{
-    content: "";
+.navlink {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 30px 20px 0 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  user-select: none;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.navlink::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #126e62;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.navlink:hover::after {
+  transform: scale(1, 1);
+}
+
+.drop {
+  position: absolute;
+  top: 4em;
+  left: 46.5em;
+  border: solid;
+}
+
+@media (min-width: 992px) {
+  .navbar {
     width: 100%;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #126e62;
-    transform: scale(0, 1);
-    transition: transform 0.3s ease;
-}
-
-.navlink:hover::after{
-    transform: scale(1, 1);
-}
-
-.drop{
-    position: absolute;
-    top:4em;
-    left:46.5em;
-    border: solid;
+    height: 120px;
+  }
+  
+  .navbar .left img {
+    width: 280px;
+  }
 }

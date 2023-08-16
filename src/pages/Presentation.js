@@ -8,15 +8,9 @@ function Présentation(){
     const [loadingWord, setLoadingWord] = useState(true);
     const [loaded, setLoaded] = useState(false);
 
-    useEffect(() => {
-        if (!loadingStat && !loadingWord) {
-            setLoaded(true)
-        }
-    }, [loadingStat, loadingWord]);
-
     return(
         <div className="content-page page-body">
-            <Banner title="Présentation" noSearch={true}/>
+            <Banner title="Présentation" noSearch />
             <Stat loaded={()=>setLoadingStat(false)}/>
             {loadingStat && loadingWord && <LoadingSpinner />}
             <Word loaded={()=>setLoadingWord(false)}/>

@@ -6,7 +6,7 @@ function Banner({title, search, noSearch}) {
   return (
     <div className='banner'>
         <h1>{title}</h1>
-        {noSearch ? null : <SearchBar search={search}/>}
+        {noSearch || <SearchBar search={search}/>}
     </div>
   )
 }

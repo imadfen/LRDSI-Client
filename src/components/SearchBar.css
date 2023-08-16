@@ -1,5 +1,5 @@
 .search-bar{
-    width: 20%;
+    width: max(20%, 9rem);
     background-color: white;
     height: 30px;
     border-radius: 15px;

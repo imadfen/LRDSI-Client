@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
-import { Outlet } from 'react-router'
+import HamburgerList from './HamburgerList'
 
-function ClientLayout(props) {
+function ClientLayout({ isLargeScreen, ...props }) {
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const handleOnOpenDrawer = () => {
+        setIsDrawerOpen(true);
+    };
+
+    const handleOnCloseDrawer = () => {
+        setIsDrawerOpen(false);
+    };
+
     return (
         <>
-            <Navbar />
+            <HamburgerList isOpen={isDrawerOpen} onClose={handleOnCloseDrawer} />
+            <Navbar openDrawer={handleOnOpenDrawer} isLargeScreen={isLargeScreen} />
             {props.children}
             <Footer />
         </>

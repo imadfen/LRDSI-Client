@@ -1,5 +1,5 @@
 .project-panel{
-    padding: 20px 18%;
+    padding: 20px 1%;
     border-left: transparent;
     border-right: transparent;
 }
@@ -30,7 +30,7 @@
 
 .date-responsable{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
     color: rgba(0, 0, 0, 0.6);
@@ -47,7 +47,7 @@
 
 .responsable{
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .responsable p{
@@ -74,4 +74,28 @@
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 576px) {
+    .date-responsable{
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .responsable{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-panel{
+        padding: 20px 12%;
+    }
+}
+
+@media (min-width: 992px) {
+    .project-panel{
+        padding: 20px 18%;
+    }
 }

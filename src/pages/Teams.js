@@ -76,9 +76,10 @@ function Teams() {
     <div className='team-content-page content-page page-body'>
         <Banner title="Équipes" search={setSearch}/>
         {loading && <LoadingSpinner/>}
-        {error
-        ? <span className='error-msg'>Erreur Chargement des Données</span>
-        :teamAttributes.map(team =>
+        {error ?
+        <span className='error-msg'>Erreur Chargement des Données</span>
+        :
+        teamAttributes.map(team =>
             <Fade top distance='10%' duration={800} key={uuidv4()} fraction={0.7}>
                 <Team details={team.details} members={team.members} doctorals={team.doctorals}/>
             </Fade>

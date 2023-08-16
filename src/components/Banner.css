@@ -1,12 +1,23 @@
-.banner{
-    background-color: #126e62;
-    padding: 5px 100px;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.banner {
+  background-color: #126e62;
+  padding: 10px 5px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.banner h1{
-    color: white;
+.banner h1 {
+  font-size: medium;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .banner {
+    padding: 5px 100px;
+  }
+
+  .banner h1 {
+    font-size: 34px;
+  }
 }

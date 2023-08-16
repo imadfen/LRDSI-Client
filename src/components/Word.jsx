@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Axios from "axios";
 import "./Word.css";
 import logo from "../assets/logo-word.png"
 import fetchFunction from "../Functions/fetchFunction";
@@ -16,12 +15,14 @@ function Word({ loaded }) {
     }, [])
     return (
         <div className="word-container">
-            <div className="presen">
-                <img src={logo} className="lrdsi-img" />
-                <p className="post">{ChefWord[0]?.post_content}</p>
-                <p className="author">{ChefWord[0]?.author_status} {ChefWord[0]?.author}</p>
+            <img src={logo} className="lrdsi-img" />
+            <div className="pres-and-pav">
+                <div className="presen">
+                    <p className="post">{ChefWord[0]?.post_content}</p>
+                    <p className="author">{ChefWord[0]?.author_status} {ChefWord[0]?.author}</p>
+                </div>
+                <span className="pav" />
             </div>
-            <span className="pav"></span>
         </div>
     )
 }
