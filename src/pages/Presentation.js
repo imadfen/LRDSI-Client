@@ -6,7 +6,6 @@ import LoadingSpinner from "../components/LoadingSpinner";
 function Présentation(){
     const [loadingStat, setLoadingStat] = useState(true);
     const [loadingWord, setLoadingWord] = useState(true);
-    const [loaded, setLoaded] = useState(false);
 
     return(
         <div className="content-page page-body">

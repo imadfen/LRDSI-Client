@@ -17,11 +17,6 @@ function Footer() {
                 <p className='title2 title'>Faculté des Sciences</p>
                 <p className='title3 title'>Laboratoire De Recherche Pour Le Developpement Des Systemes Informatises</p>
             </div>
-
-            <div className='footer-buttons'>
-                <a href='/contact' className='contact-btn footer-btn'>Contactez-Nous</a>
-                <a href='' className='report-btn footer-btn'>Rapport Problème</a>
-            </div>
         </div>
         <p className='copyright'>Copyright ©2023 All rights reserved to LRDSI</p>
     </footer>

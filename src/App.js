@@ -39,7 +39,7 @@ function App() {
         isLargeScreen={isLargeScreen}
       >
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isLargeScreen={isLargeScreen} />} />
           <Route path="/Presentation" element={<Présentation />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/pubevents" element={<PubEvents isLargeScreen={isLargeScreen} />} />

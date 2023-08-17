@@ -105,9 +105,11 @@
   margin: 0 !important;
 }
 
-.pubevent-tab-list > li{
+.projects-content-page .react-tabs__tab-list li,
+.pub-event-content .react-tabs__tab-list li{
   width: fit-content;
 }
+
 
 .separator {
   width: 90%;

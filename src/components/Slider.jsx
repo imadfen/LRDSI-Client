@@ -8,7 +8,7 @@ import fetchFunction from '../Functions/fetchFunction'
 const { v4: uuidv4 } = require('uuid')
 
 
-function Slider({ sliderData }) {
+function Slider({ sliderData, isLargeScreen }) {
   const [imageDataList, setImageDataList] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function Slider({ sliderData }) {
 
   return (
     <div className='slider-container'>
-      <Carousel showThumbs={false} autoPlay={true} interval={5000} infiniteLoop={true} transitionTime={200} preventMovementUntilSwipeScrollTolerance swipeScrollTolerance={50}>
+      <Carousel showThumbs={false} showArrows={isLargeScreen} autoPlay={true} interval={5000} infiniteLoop={true} transitionTime={200} preventMovementUntilSwipeScrollTolerance swipeScrollTolerance={50}>
         {sliderData.map((elem, i) => (
           <div className='slider-element' key={uuidv4()}>
             {(elem.image_src != undefined) && <img src={imageDataList[i]} />}

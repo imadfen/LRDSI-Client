@@ -1,64 +1,66 @@
-.word-container{
-    margin: 20px 0;
-    width: 100%;
+.word-container {
+  margin: 20px 0;
+  width: 100%;
 }
 
-.pres-and-pav{
-    border-radius:10px;
-    margin-bottom: 5px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-
+.pres-and-pav {
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.lrdsi-img{
-    width: min(300px, 60%);
+.lrdsi-img {
+  width: min(300px, 60%);
 }
 
-.presen{
-    padding: 20px;
-    text-indent: 30px;
-    font-size: large;    
-    font-weight: 700;
+.presen {
+  padding: 20px;
+  text-indent: 30px;
+  font-weight: 500;
 }
-.post{
-    margin-top: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-}
-
-.author{
-    text-align: right;
-    font-size:small;
-    font-weight: 500;
+.post {
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
-
-.pav{
-    aspect-ratio: 1;
-    width: min(500px, 100%);
-    margin: auto 0 auto 30px;
-    border-radius:10px;
-    background-image: linear-gradient(to top, transparent 70%, transparent 70%, white),
-                        linear-gradient(to right,  transparent 80%,  transparent 80%, white),
-                        linear-gradient(to bottom,  transparent 80%,  transparent 80%, white),
-                        linear-gradient(to left,  transparent 80%,  transparent 80%, white),
-                        url('../assets/pav1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.author {
+  text-align: right;
+  font-size: small;
+  font-weight: 500;
 }
 
+.pav {
+  aspect-ratio: 1;
+  width: min(500px, 100%);
+  margin: auto 0 auto 30px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+      to top,
+      transparent 70%,
+      transparent 70%,
+      white
+    ),
+    linear-gradient(to right, transparent 80%, transparent 80%, white),
+    linear-gradient(to bottom, transparent 80%, transparent 80%, white),
+    linear-gradient(to left, transparent 80%, transparent 80%, white),
+    url("../assets/pav1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 @media (min-width: 992px) {
-    .pres-and-pav{
-        flex-direction: row;
-        align-items: end;
-    }
+  .pres-and-pav {
+    flex-direction: row;
+    align-items: end;
+  }
 
-    .presen{
-        width: 50%;
-    }
+  .presen {
+    width: 50%;
+    font-weight: 700;
+  }
 }

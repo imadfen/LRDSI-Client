@@ -6,7 +6,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import Actualities from '../components/ActualitySection';
 import fetchFunction from '../Functions/fetchFunction';
 
-function Home() {
+function Home({isLargeScreen}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false)
   const [pres, setPres] = useState(["..."])
@@ -87,7 +87,7 @@ function Home() {
       : error
         ? <span className='error-msg'>Erreur Chargement des Données</span>
         : <>
-          <Slider sliderData={slideElements}/>
+          <Slider sliderData={slideElements} isLargeScreen={isLargeScreen}/>
           <ShortPres presData={pres}/>
           <Actualities actualitiesData={actualities}/>
         </>
