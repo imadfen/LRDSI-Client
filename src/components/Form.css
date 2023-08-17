@@ -23,10 +23,17 @@ form {
   top: -13px;
   right: 35px;
 }
-.input-info {
-  position: relative;
+
+.form-input-container{
+  display: flex;
+  flex-direction: column;
   margin: 20px 0;
 }
+
+.input-info {
+  position: relative;
+}
+
 .input {
   width: 100%;
   outline: none;
@@ -40,6 +47,18 @@ form {
   border-radius: 5px;
   transition: 0.3s;
 }
+
+.form-error-message{
+  height: auto;
+  color: red;
+  font-size: small;
+  font-weight: 300;
+}
+
+.form-error-message p{
+  margin: 0;
+}
+
 textarea.input {
   min-height: 100px;
   resize: none;
@@ -114,6 +133,7 @@ textarea.input {
   width: 70%;
   opacity: 1;
 }
+
 
 @media (min-width: 992px) {
   .contact-forme:before {

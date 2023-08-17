@@ -8,7 +8,7 @@ function Info(){
         <div className="body-page">
             <h3 className="titre">LRDSI</h3>
             <div className="content">
-                <p1 className="text">contacter nous pour votre projet ou pour obtenir plus d'information sur Laboratoire ou dommaine recherche scientifique</p1>
+                <p className="text">contacter nous pour votre projet ou pour obtenir plus d'information sur Laboratoire ou dommaine recherche scientifique</p>
                 <div className="info">
                     <div className="content-info">
                         <img src={Map}/>

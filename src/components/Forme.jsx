@@ -1,4 +1,4 @@
-import { Formik, Field, Form, useFormikContext } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import './Form.css';
 import * as Yup from 'yup';
 
@@ -13,51 +13,84 @@ function Forme({ success }) {
     }
   };
 
-  const handleSubmit = async (values, { resetForm }) => {
-    try {
-      const res = await fetch('/addmessage', {
-        body: JSON.stringify(values)
-      })
-      success()
-      resetForm()
-    } catch (error) {
-      console.log("failed to send message")
-    }
+  const handleSubmit = (values, { resetForm }) => {
+    setTimeout(() => { }, 1000);
+    success()
+    resetForm()
   }
 
   const validation = Yup.object().shape({
-    nom: Yup.string().matches(/^[A-Za-z]+$/).required('obligatoire'),
-    prénom: Yup.string().matches(/^[A-Za-z]+$/).required('obligatoire'),
+    nom: Yup.string().matches(/^[A-Za-z\s]+$/, "nom invalid").required('obligatoire'),
+    prenom: Yup.string().matches(/^[A-Za-z\s]+$/, "prenom invalid").required('obligatoire'),
     email: Yup.string().email('email invalide').required('obligatoire'),
-    tel: Yup.string().matches(/^[0-9]+$/),
+    tel: Yup.string().matches(/^\+?\d+$/, "numero de tel invalide"),
     message: Yup.string().max(3000, 'trés grand').required('obligatoire'),
 
   });
-  
+
   return (
     <div className="contact-forme">
       <h3 className='titleC'>Contact us</h3>
 
-      <Formik initialValues={{ nom: "", prénom: "", email: "", tel: "", message: "" }} validationSchema={validation} onSubmit={handleSubmit}>
+      <Formik initialValues={{ nom: "", prenom: "", email: "", tel: "", message: "" }} validationSchema={validation} onSubmit={handleSubmit}>
         <Form>
-          <div className="input-info">
-            <label htmlFor="nom">nom</label>
-            <Field name="nom" type="text" className="input" id="nom" onFocus={handleFocus} onBlur={handleBlur} /> <span>nom</span>
-          </div>
-          <div className="input-info"><label htmlFor="prénom">prénom</label><Field name="prénom" id="prénom" type="text" className="input" onFocus={handleFocus} onBlur={handleBlur} />
-            <span>prénom</span>
+          <div className="form-input-container">
+            <div className="input-info">
+              <label htmlFor="nom">nom</label>
+              <Field name="nom" type="text" className="input" id="nom" onFocus={handleFocus} onBlur={handleBlur} /> <span>nom</span>
+            </div>
+
+            <span className="form-error-message">
+            <ErrorMessage name='nom' component="p" />
+            </span>
           </div>
 
-          <div className="input-info"><label htmlFor="email">email</label><Field name="email" id="email" type="email" className="input" onFocus={handleFocus} onBlur={handleBlur} />
-            <span>email</span>
+          <div className="form-input-container">
+            <div className="input-info">
+              <label htmlFor="prenom">prénom</label>
+              <Field name="prenom" id="prenom" type="text" className="input" onFocus={handleFocus} onBlur={handleBlur} />
+              <span>prénom</span>
+            </div>
+
+            <span className="form-error-message">
+            <ErrorMessage name='prenom' component="p" />
+            </span>
           </div>
 
-          <div className="input-info"><label htmlFor="tel">téléphone</label><Field name="tel" id="tel" type="tel" className="input" onFocus={handleFocus} onBlur={handleBlur} />
-            <span>téléphone</span>
+          <div className="form-input-container">
+            <div className="input-info">
+              <label htmlFor="email">email</label>
+              <Field name="email" id="email" type="email" className="input" onFocus={handleFocus} onBlur={handleBlur} />
+              <span>email</span>
+            </div>
+
+            <span className="form-error-message">
+            <ErrorMessage name='email' component="p" />
+            </span>
           </div>
 
-          <div className="input-info"><label htmlFor="message">message</label><Field name="message" id="message" as="textarea" className="input" onFocus={handleFocus} onBlur={handleBlur} />
-            <span>message</span>
+          <div className="form-input-container">
+            <div className="input-info">
+              <label htmlFor="tel">téléphone</label>
+              <Field name="tel" id="tel" type="tel" className="input" onFocus={handleFocus} onBlur={handleBlur} />
+              <span>téléphone</span>
+            </div>
+
+            <span className="form-error-message">
+            <ErrorMessage name='tel' component="p" />
+            </span>
+          </div>
+
+          <div className="form-input-container">
+            <div className="input-info">
+              <label htmlFor="message">message</label>
+              <Field name="message" id="message" as="textarea" className="input" onFocus={handleFocus} onBlur={handleBlur} />
+              <span>message</span>
+            </div>
+
+            <span className="form-error-message">
+            <ErrorMessage name='message' component="p" />
+            </span>
           </div>
 
           <button type="submit" className="btn">envoyer</button>
