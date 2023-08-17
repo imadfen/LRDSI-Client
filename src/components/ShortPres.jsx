@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import curvedShape from "../assets/curved-shape.svg";
 import './ShortPres.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

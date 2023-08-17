@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './Actuality.css'
 import ImageRender from './ImageRender'
 
-function Actuality({data}) {
+function Actuality({data, ...props}) {
     return (
-        <div className='actuality'>
+        <div className='actuality' {...props}>
             <div className='actuality-user-date'>
                 <p className='user'>{data.author}</p>
                 <p className='user'>-</p>
